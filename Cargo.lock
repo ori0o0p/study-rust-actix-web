@@ -995,6 +995,7 @@ dependencies = [
  "actix-cors",
  "actix-web",
  "num_cpus",
+ "serde",
 ]
 
 [[package]]
