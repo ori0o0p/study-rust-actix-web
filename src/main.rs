@@ -31,12 +31,7 @@ async fn main() -> std::io::Result<()> {
 
     HttpServer::new(move || {
         App::new()
-            .wrap(
-                Cors::default()
-                    .allow_any_origin()
-                    .allowed_methods(vec!["GET"])
-                    .allow_any_header(),
-            )
+            .wrap(Cors::default())
             .service(get_article)
             .service(upload_article)
             .service(find_all)
